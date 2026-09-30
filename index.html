@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zohara OS — a Linux that feels like home</title>
+  <meta name="description" content="Zohara OS is an Arch-based Linux with a desktop Windows users already know: a familiar taskbar and Start menu, a Windows 11-style Settings app, a software store and voice typing that runs on your own computer.">
+  <meta name="theme-color" content="#0B0E14">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:title" content="Zohara OS — a Linux that feels like home">
+  <meta property="og:description" content="A Windows-familiar Linux desktop with its own Settings app, software store and offline voice typing.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zohaib8090.github.io/zohara-website/">
+  <meta property="og:image" content="https://zohaib8090.github.io/zohara-website/assets/img/desktop.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="#top" aria-label="Zohara OS, home">
+        <img src="assets/logo.svg" width="36" height="36" alt="">
+        <span>Zohara OS</span>
+      </a>
+      <nav aria-label="Main">
+        <a href="#features">Features</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#requirements">Requirements</a>
+        <a href="https://github.com/Zohaib8090/zohara">GitHub</a>
+        <a class="btn btn-small" href="#download">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Arch-based Linux · KDE Plasma</p>
+          <h1>A Linux that feels like home.</h1>
+          <p class="lead">Zohara OS gives you a desktop you already know how to use: a familiar taskbar and Start menu, a Settings app laid out like Windows 11, a software store, and voice typing that runs entirely on your own computer.</p>
+          <p class="cta">
+            <a class="btn" href="#download">Get Zohara OS</a>
+            <a class="btn btn-ghost" href="#screenshots">See it</a>
+          </p>
+          <p class="fine">Free and open source. x86_64 PCs. Still being finished; see <a href="#status">status</a>.</p>
+        </div>
+        <figure class="hero-shot">
+          <img src="assets/img/desktop.webp" width="1280" height="800" alt="The Zohara OS desktop: a blue and coral wallpaper, with a taskbar along the bottom holding the Start button, Settings, Software Store, Files and Brave Origin.">
+        </figure>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="wrap">
+        <h2>Made for people coming from Windows</h2>
+        <p class="section-lead">Linux is powerful, but it usually asks you to learn a new way of doing everything. Zohara keeps the parts you know and puts a button on the parts that used to need a terminal.</p>
+        <div class="cards">
+          <article class="card">
+            <h3>A desktop you already know</h3>
+            <p>A taskbar with a Start button, a Start menu with search and Favorites, and a Windows-flavoured look on top of KDE Plasma. Nothing to relearn on day one.</p>
+          </article>
+          <article class="card">
+            <h3>Settings that change real things</h3>
+            <p>A custom Settings app in the Windows 11 layout: display, sound, Bluetooth, network, storage, accounts, default apps, gaming and printers. Each page controls the actual system, not a mock-up.</p>
+          </article>
+          <article class="card">
+            <h3>Voice typing, fully offline</h3>
+            <p>Press <kbd>Meta</kbd> + <kbd>H</kbd>, speak, and the words are typed where your cursor is. Recognition runs on your computer with whisper.cpp and a multilingual model that ships in the ISO. Nothing is uploaded.</p>
+          </article>
+          <article class="card">
+            <h3>A real software store</h3>
+            <p>Zohara Store installs apps and handles updates. It shows what is changing, lets you choose what to update, and offers a way back if an update goes wrong.</p>
+          </article>
+          <article class="card">
+            <h3>Snapshots around updates</h3>
+            <p>On Btrfs, a snapshot is taken before and after every package change, so there is something to go back to. Updates follow a date that the project approves, not the raw Arch stream.</p>
+          </article>
+          <article class="card">
+            <h3>Problems get reported, not hidden</h3>
+            <p>If the installer fails, one button on the Welcome screen saves a report to a USB stick. In the installed system, Settings keeps a log and offers one-click fixes on the Troubleshoot page.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="screenshots" class="section alt">
+      <div class="wrap">
+        <h2>A look around</h2>
+        <p class="section-lead">Click any picture to see it full size. These are from a test build running in a virtual machine.</p>
+        <div class="gallery">
+          <figure>
+            <a href="assets/img/store.webp"><img loading="lazy" src="assets/img/store.webp" width="1280" height="800" alt="Zohara Store's home page with large cards for Firefox, Steam, GIMP and VSCodium, and an Editor's Picks row below."></a>
+            <figcaption><strong>Zohara Store.</strong> Find and install apps in one place.</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/img/settings-home.webp"><img loading="lazy" src="assets/img/settings-home.webp" width="1280" height="800" alt="Zohara Settings home page showing the device name, network and update status, storage use, recommended settings and Bluetooth."></a>
+            <figcaption><strong>Settings.</strong> A left rail and card groups, like the Windows 11 layout.</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/img/settings-update.webp"><img loading="lazy" src="assets/img/settings-update.webp" width="1280" height="800" alt="Zohara Update page saying You're up to date, with options to pause updates, see update history and choose a channel."></a>
+            <figcaption><strong>Updates.</strong> Check, pause, review history, or pick a channel.</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/img/start-menu.webp"><img loading="lazy" src="assets/img/start-menu.webp" width="1280" height="800" alt="The Start menu open over the desktop, with Favorites for Brave Origin, Settings, Dolphin and Software Store, and categories on the left."></a>
+            <figcaption><strong>Start menu.</strong> Favorites, categories and search.</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/img/settings-accessibility.webp"><img loading="lazy" src="assets/img/settings-accessibility.webp" width="1280" height="800" alt="The Accessibility settings page with vision, hearing and speech options such as high contrast, cursor size and a screen reader."></a>
+            <figcaption><strong>Accessibility.</strong> Contrast, text size, a screen reader and more.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap two">
+        <div>
+          <h2>What is inside</h2>
+          <ul class="ticks">
+            <li><strong>Arch Linux</strong> base, with the <strong>KDE Plasma 6</strong> desktop on Wayland.</li>
+            <li>The <strong>Zen kernel</strong>, tuned for desktop and gaming rather than servers.</li>
+            <li><strong>NVIDIA open drivers</strong> included, so supported NVIDIA GPUs need no manual driver setup.</li>
+            <li><strong>Brave Origin</strong> as the browser: Brave's ad and tracker blocking without the wallet, VPN or news.</li>
+            <li>The <strong>Calamares</strong> installer, which can install alongside Windows when it finds it.</li>
+          </ul>
+        </div>
+        <aside class="note" id="status">
+          <h3>Honest status</h3>
+          <p>Zohara OS is still being finished. Some Settings pages don't respond yet, and the ISO is built from the latest development work. Please try it in a virtual machine or on a spare computer first.</p>
+          <p><strong>Coming later:</strong> Zohara Link, a companion for Android that shares your clipboard, files and notifications with your PC. It is in development and not released.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="download" class="section alt">
+      <div class="wrap">
+        <h2>Download</h2>
+        <p class="section-lead">The ISO is about 3.9&nbsp;GB. GitHub builds a fresh one automatically every time the project changes.</p>
+        <div class="download">
+          <div>
+            <h3>Get the latest ISO</h3>
+            <ol class="steps">
+              <li>Open the <a href="https://github.com/Zohaib8090/zohara/actions/workflows/build-iso.yml">latest successful build</a> on GitHub (you need to be signed in to GitHub).</li>
+              <li>Download the <code>zohara-os-x86_64</code> file. It is a zip that contains the <code>.iso</code>.</li>
+              <li>Write the ISO to a USB stick with Ventoy, balenaEtcher or <code>dd</code>.</li>
+              <li>Boot from the stick and choose <strong>Install Zohara</strong>, or <strong>Try Zohara</strong> to look around first.</li>
+            </ol>
+            <p class="cta"><a class="btn" href="https://github.com/Zohaib8090/zohara/actions/workflows/build-iso.yml">Open the latest build</a></p>
+            <p class="fine">A direct download link that doesn't need a GitHub account is planned. Builds are kept for 30 days.</p>
+          </div>
+          <aside class="note">
+            <h3>Before you boot</h3>
+            <ul class="plain">
+              <li><strong>Turn off Secure Boot.</strong> The bootloaders aren't signed yet.</li>
+              <li>If the installer shows no disks, set storage mode to <strong>AHCI</strong> instead of RAID / Intel RST.</li>
+              <li>On a PC with Windows, choose <strong>Install alongside</strong> or <strong>Manual partitioning</strong>. The installer never picks "Erase disk" for you.</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="requirements" class="section">
+      <div class="wrap">
+        <h2>System requirements</h2>
+        <table class="req">
+          <caption class="sr">Minimum requirements</caption>
+          <tbody>
+            <tr><th scope="row">Processor</th><td>64-bit x86 (Intel or AMD). Older CPUs work; voice typing is slower on them.</td></tr>
+            <tr><th scope="row">Memory</th><td>4&nbsp;GB RAM</td></tr>
+            <tr><th scope="row">Storage</th><td>20&nbsp;GB free</td></tr>
+            <tr><th scope="row">Firmware</th><td>UEFI or legacy BIOS</td></tr>
+            <tr><th scope="row">Graphics</th><td>Intel, AMD, or a modern NVIDIA card</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap two">
+        <div>
+          <h2>Open source, made by one person</h2>
+          <p>Zohara OS is created and maintained by <strong>Zohaib Baig</strong> (<a href="https://github.com/Zohaib8090">@Zohaib8090</a>). It is dual-licensed under MIT and GPL-3.0-or-later, and third-party software keeps its own licenses.</p>
+          <p>Issues, ideas and pull requests are welcome on GitHub.</p>
+        </div>
+        <div>
+          <h3>Repositories</h3>
+          <ul class="plain">
+            <li><a href="https://github.com/Zohaib8090/zohara">zohara</a> — the ISO, the installer setup, Store, Welcome, voice typing</li>
+            <li><a href="https://github.com/Zohaib8090/zohara-settings">zohara-settings</a> — the Settings app</li>
+            <li><a href="https://github.com/Zohaib8090/zohara-packages">zohara-packages</a> — updates for installed systems</li>
+            <li><a href="https://github.com/Zohaib8090/zohara-pipeline">zohara-pipeline</a> — the signed update approvals</li>
+            <li><a href="https://github.com/Zohaib8090/zohara-link">zohara-link</a> — phone companion (in development)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><img src="assets/logo.svg" width="22" height="22" alt=""> Zohara OS · © Zohaib Baig</p>
+      <p class="fine">Windows is a trademark of Microsoft. Zohara OS is an independent project and is not affiliated with or endorsed by Microsoft, Brave Software, or Arch Linux.</p>
+    </div>
+  </footer>
+</body>
+</html>
