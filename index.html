@@ -10,8 +10,9 @@
   <meta property="og:title" content="Zohara OS — a Linux that feels like home">
   <meta property="og:description" content="A Windows-familiar Linux desktop with its own Settings app, software store and offline voice typing.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://zohaib8090.github.io/zohara-website/">
-  <meta property="og:image" content="https://zohaib8090.github.io/zohara-website/assets/img/desktop.webp">
+  <link rel="canonical" href="https://zohara-website.onrender.com/">
+  <meta property="og:url" content="https://zohara-website.onrender.com/">
+  <meta property="og:image" content="https://zohara-website.onrender.com/assets/img/desktop.webp">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
@@ -139,18 +140,18 @@
     <section id="download" class="section alt">
       <div class="wrap">
         <h2>Download</h2>
-        <p class="section-lead">The ISO is about 3.9&nbsp;GB, which is more than GitHub allows for a release file. So tagged versions are listed on the Releases page, and a fresh ISO is also built automatically every time the project changes.</p>
+        <p class="section-lead">The ISO is about 3.9&nbsp;GB. It is hosted on SourceForge, which is free and serves it from mirrors; it is too large for a GitHub release file.</p>
         <div class="download">
           <div>
-            <h3>Get the latest ISO</h3>
+            <h3>Zohara OS 2026.09.30</h3>
+            <p class="cta"><a class="btn" href="https://sourceforge.net/projects/zohara-os/files/2026.09.30/zohara-os-2026.09.30-x86_64.iso/download">Download the ISO (3.9&nbsp;GB)</a> <a class="btn btn-ghost" href="https://sourceforge.net/projects/zohara-os/files/">All files</a></p>
             <ol class="steps">
-              <li>Open the <a href="https://github.com/Zohaib8090/zohara/releases">Releases page</a> for tagged versions, or the <a href="https://github.com/Zohaib8090/zohara/actions/workflows/build-iso.yml">latest successful build</a> for the newest ISO (you need to be signed in to GitHub for builds).</li>
-              <li>Download the <code>zohara-os-x86_64</code> file. It is a zip that contains the <code>.iso</code>.</li>
+              <li>Download the ISO with the button above.</li>
+              <li>Optional: check it. Its SHA-256 is <code class="hash">29a22b6b19731dc82bbb132f7ef61f3fc64279e6aff2b4603ad026b269402a46</code>, also listed in <code>SHA256SUMS</code> next to the download.</li>
               <li>Write the ISO to a USB stick with Ventoy, balenaEtcher or <code>dd</code>.</li>
               <li>Boot from the stick and choose <strong>Install Zohara</strong>, or <strong>Try Zohara</strong> to look around first.</li>
             </ol>
-            <p class="cta"><a class="btn" href="https://github.com/Zohaib8090/zohara/releases">Go to Releases</a> <a class="btn btn-ghost" href="https://github.com/Zohaib8090/zohara/actions/workflows/build-iso.yml">Latest ISO build</a></p>
-            <p class="fine">A direct download link that doesn't need a GitHub account is planned. Build files are kept for 30 days.</p>
+            <p class="fine">Tagged versions and release notes are on the <a href="https://github.com/Zohaib8090/zohara/releases">GitHub Releases page</a>. The newest development build is always available from <a href="https://github.com/Zohaib8090/zohara/actions/workflows/build-iso.yml">GitHub Actions</a> (sign-in required).</p>
           </div>
           <aside class="note">
             <h3>Before you boot</h3>

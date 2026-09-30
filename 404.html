@@ -5,18 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page not found · Zohara OS</title>
   <meta name="robots" content="noindex">
-  <!-- A 404 page is served from any path, so it needs a base. Project pages live under /zohara-website/;
-       with a custom domain at the root, change this to "/". -->
-  <base href="/zohara-website/">
-  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css">
+  <meta name="color-scheme" content="dark">
+  <!-- Self-contained on purpose: a 404 page is served from whatever path was mistyped, on whichever host
+       (Render, GitHub Pages), so it uses no relative links and no external files. -->
+  <style>
+    :root { color-scheme: dark; }
+    body { margin: 0; min-height: 100vh; display: grid; place-content: center; gap: 14px; text-align: center; padding: 24px;
+           background: #0B0E14; color: #E8ECF1; font: 400 1.0625rem/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif; }
+    svg { margin-inline: auto; }
+    h1 { font-size: 2.2rem; line-height: 1.15; margin: 0; }
+    p { margin: 0 auto; color: #a3aebf; }
+    a.btn { display: inline-block; margin-top: 8px; background: #5FD4D4; color: #062b2d; font-weight: 700; text-decoration: none;
+            padding: 13px 22px; border-radius: 999px; }
+    a.btn:hover { background: #8ee6e6; }
+    a.btn:focus-visible { outline: 3px solid #5FD4D4; outline-offset: 3px; }
+  </style>
 </head>
 <body>
-  <main class="wrap" style="min-height:100vh;display:grid;place-content:center;text-align:center;gap:14px">
-    <img src="assets/logo.svg" width="72" height="72" alt="" style="margin-inline:auto;border-radius:16px">
-    <h1 style="font-size:2.2rem;margin:0">That page isn't here.</h1>
-    <p class="lead" style="margin:0 auto">The link may be old, or mistyped.</p>
-    <p class="cta" style="justify-content:center"><a class="btn" href="./">Back to Zohara OS</a></p>
+  <main>
+    <svg width="72" height="72" viewBox="0 0 340 340" role="img" aria-label="Zohara OS logo" xmlns="http://www.w3.org/2000/svg">
+      <rect width="340" height="340" rx="64" fill="#0B0E14"/>
+      <g transform="translate(170,170) rotate(45)">
+        <rect x="-86" y="-86" width="78" height="78" rx="14" fill="#E8ECF1"/>
+        <rect x="8" y="-86" width="78" height="78" rx="14" fill="#E8ECF1" opacity="0.55"/>
+        <rect x="-86" y="8" width="78" height="78" rx="14" fill="#E8ECF1" opacity="0.55"/>
+        <rect x="8" y="8" width="78" height="78" rx="14" fill="#5FD4D4"/>
+      </g>
+    </svg>
+    <h1>That page isn't here.</h1>
+    <p>The link may be old, or mistyped.</p>
+    <p><a class="btn" href="https://zohara-website.onrender.com/">Back to Zohara OS</a></p>
   </main>
 </body>
 </html>

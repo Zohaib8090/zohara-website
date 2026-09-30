@@ -10,14 +10,16 @@ A static site: plain HTML and CSS, no build step, no JavaScript, no external fon
 
 Preview locally: `python3 -m http.server 8080` in this folder, then open http://localhost:8080.
 
-## Publishing on GitHub Pages
+## Hosting
 
-1. Create a public repository (suggested name: `zohara-website`) and push this folder to `main`.
-2. Repository Settings > Pages > Build and deployment > Source: "Deploy from a branch", branch `main`, folder `/ (root)`.
-3. The site appears at `https://<user>.github.io/<repo>/`. `404.html` has a `<base href="/zohara-website/">`, and
-   `index.html` has absolute `og:` URLs; when a custom domain replaces the `github.io` address, change the base
-   to `"/"` and update the `og:url` / `og:image` URLs.
-4. A custom domain is optional: add it under Pages > Custom domain (and a `CNAME` file), then tick "Enforce HTTPS".
+The main address is **https://zohara-website.onrender.com/** (Render, static site). Settings used: repository
+`zohara-website`, branch `main`, Root Directory empty, Build Command empty, Publish Directory `./`. Every push to
+`main` redeploys. `index.html` has a `canonical` link and `og:` URLs pointing at that address; change them if the
+address changes (for example when a custom domain is added in Render's settings).
+
+The same repository is also published on GitHub Pages at https://zohaib8090.github.io/zohara-website/ (Settings >
+Pages > branch `main`, folder `/`). Nothing on the page depends on the host: all links are relative and
+`404.html` is self-contained. Switch Pages off if a second copy is not wanted.
 
 ## Keeping it true
 
