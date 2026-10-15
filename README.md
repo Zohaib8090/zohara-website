@@ -1,9 +1,15 @@
 # Zohara OS website
 
-A static site: plain HTML and CSS, no build step, no JavaScript, no external fonts or trackers.
+A static site: plain HTML and CSS plus one small script for the scroll rail, the theme switch and the phone menu. No build step
+to deploy, no libraries, no external fonts or trackers. The pages work with JavaScript turned off.
 
-    index.html      the page
-    style.css       styles (colours come from the logo: #0B0E14, #E8ECF1, #5FD4D4)
+    index.html      the home page (one long page with a scroll rail)
+    settings.html, store.html, games.html, link.html, welcome.html   one page per app
+    style.css       styles (a dark "blueprint" look; colours come from the logo: #0B0E14, #E8ECF1, #5FD4D4; light theme included)
+    site.js         the rail on the right edge, appear-on-scroll, dark/light switch, phone menu (no libraries, no network)
+    tools/make_pages.py   writes the six HTML pages from the text in it, so header, footer and rail match everywhere.
+                    Edit the text there, run `python3 tools/make_pages.py`, commit the generated pages. Bump V in it when
+                    style.css or site.js change (the pages link them with ?v=V so browsers fetch the new files).
     404.html        not-found page
     assets/logo.svg the Zohara logo (copied from zohara-profile/airootfs/usr/share/pixmaps/zohara-logo.svg)
     assets/img/     screenshots, WebP. Since the 1.1 release they are real captures from the owner's laptop (hero, Store,
@@ -49,3 +55,13 @@ mirror button was removed for 1.1 (add it back only when the mirror has the same
 Single page, `index.html`, sections in order: top (hero), `#features` (Made for people coming from Windows), `#new` (New in Zohara OS 1.1),
 `#screenshots` (A look around, 15 pictures), What is inside (with `#status`), `#download`, `#requirements`, Open source (repositories).
 Other files: `404.html`, `style.css`, `assets/`, `google0dfec91cc0809278.html` (Google Search Console verification), `CNAME`.
+
+## The revamp (2026-10-15)
+
+Built on the `revamp` branch, not on `main`, so it can be looked at before the live site changes (Render publishes `main`).
+Look: dark blueprint grid, mono labels, a teal accent, and on screens wider than 1240px a rail along the right edge: a ruler, a line
+that follows the page with its live percent, and the section labels, which turn into view along a curve as you reach them.
+Under 1240px the rail is not drawn; with "reduce motion" the labels stay still; with JavaScript off nothing is hidden.
+Pages for features that are not in the 1.1 ISO (Windows games, Java page, Zohara Link, game streaming) say so with an
+"In testing" or "In development" tag. Checked with headless Chrome at 390, 820 and 1440 px, dark and light: no horizontal scroll,
+no broken pictures, no dead anchors, no console errors.

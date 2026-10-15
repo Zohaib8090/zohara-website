@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zohara Games: Windows games with no Steam in the way</title>
+  <meta name="description" content="Windows programs and games open with a double-click through Proton-GE or Wine, with settings for every game, on Zohara OS. In testing.">
+  <meta name="theme-color" content="#080B10">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:title" content="Zohara Games: Windows games with no Steam in the way">
+  <meta property="og:description" content="Windows programs and games open with a double-click through Proton-GE or Wine, with settings for every game, on Zohara OS. In testing.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://zohara-website.onrender.com/games.html">
+  <meta property="og:url" content="https://zohara-website.onrender.com/games.html">
+  <meta property="og:image" content="https://zohara-website.onrender.com/assets/img/settings-gaming.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=20261015d">
+</head>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="index.html" aria-label="Zohara OS, home"><img src="assets/logo.svg" alt="" width="30" height="30">Zohara OS</a>
+      <button class="icon-btn menu-btn" id="menu" aria-label="Menu" aria-expanded="false" aria-controls="nav">&#9776;</button>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="settings.html">Settings</a>
+        <a href="store.html">Store</a>
+        <a href="games.html" aria-current="page">Games</a>
+        <a href="link.html">Link</a>
+        <a href="welcome.html">Welcome</a>
+        <a href="index.html#download" class="dl">Download</a>
+        <button class="icon-btn" id="theme" aria-label="Switch between dark and light" title="Dark / light">&#9681;</button>
+      </nav>
+    </div>
+  </header>
+  <div class="crumb"><div class="wrap"><span>04</span><span>/</span><b>Games</b></div></div>
+  <main id="main">
+  <section class="hero" id="overview" data-rail="Overview"><div class="wrap">
+      <span class="hud rv"><i>01</i>Games <span class="tag test">In testing</span></span>
+      <h1 class="rv">Play Windows games <em>without Steam</em> in the middle.</h1>
+      <p class="lead rv">The layers that run Windows games live in the operating system. You turn them on in Settings, then double-click a game. Steam is not needed for that, and a Steam, Lutris or Heroic game still gets the same per-game settings.</p>
+      <p class="note rv"><b>In testing.</b> Everything on this page is built and being tested in the development channel. It is not in the 1.1 ISO, and it has been tried on one laptop (Intel and NVIDIA graphics), not on AMD.</p>
+      <figure class="frame rv">
+          <div class="bar2"><span></span><span></span><span></span><em>gaming</em></div>
+          <a href="assets/img/settings-gaming.webp"><img src="assets/img/settings-gaming.webp" alt="The Gaming page in Settings (Zohara OS 1.1)" width="1280" height="877" loading="lazy"></a>
+          <figcaption>The Gaming page in Zohara OS 1.1. The newer parts below are in the development channel.</figcaption>
+        </figure>
+    </div></section>
+  <section id="double" data-rail="Double-click">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="hud"><i>02</i>Double-click and play</span>
+        <h2>Windows programs <em>just open</em>.</h2>
+        <p class="lead">Turn on &ldquo;Open Windows programs with a double-click&rdquo; in Settings (it is on by default in the newest builds). Then <code>.exe</code>, <code>.bat</code>, <code>.msi</code> and Windows shortcuts open from your file manager.</p>
+      </div>
+<div class="split"><ul class="ticks rv"><li><b>Proton-GE</b> is Valve&rsquo;s Proton plus extra fixes for more games. It is downloaded when you ask (about 565 MB) and checked against the published checksum before it is unpacked.</li><li><b>Plain Wine</b> is the other choice, for programs that do better without Proton.</li><li><b>One Windows folder per game</b>, so a game&rsquo;s settings and saves stay together. Programs an installer made can be found and added as games, with the program&rsquo;s own icon.</li><li><b>Right-click</b> a Windows file to run it once with Proton-GE, with Wine, or on the dedicated graphics chip, or to add it as a game.</li><li><b>When something fails to start,</b> you get a notice with an &ldquo;Open the log&rdquo; button, and every game keeps its own log.</li></ul><div class="note ok rv"><b>On a laptop with two graphics chips</b>, each game can be told to use the dedicated one, and a live view shows which chip every running app is on, with load, memory and temperature, without waking a sleeping chip.</div></div>
+    </div>
+  </section>
+  <section id="safety" data-rail="Safety">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="hud"><i>03</i>Safety mode</span>
+        <h2>An unknown program <em>stays in its box</em>.</h2>
+        <p class="lead">Wine and Proton can read and delete everything in your home folder. Double-clicking makes it easy to run something you have not checked, so a program that is not one of your games runs in a protected space.</p>
+      </div>
+<div class="split flip"><ul class="ticks rv"><li>It sees an <b>empty home folder</b>: no Documents, no browser data, no SSH keys, no Steam login.</li><li>It can write only to <b>its own Windows folder</b> and its own program folder.</li><li>It is made with <b>bubblewrap</b>, the technology Flatpak uses, and can be switched off per game, per start, or for everything.</li><li>Tested by running a real program through Proton-GE: it could not read a secret file placed in the home folder, and a file it wrote there never reached the real disk.</li></ul><div class="note rv"><b>What it is not.</b> It limits damage; it is not an antivirus. The program can still use the internet. Anti-cheat and some copy protection will not run inside it, and Game Mode does not reach into it.</div></div>
+    </div>
+  </section>
+  <section id="gear" data-rail="Settings">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="hud"><i>04</i>A gear on every game</span>
+        <h2>Every game, <em>every launcher</em>.</h2>
+        <p class="lead">One settings window for games you added by hand and for the ones Steam, Lutris and Heroic found.</p>
+      </div>
+<div class="grid g3"><div class="card rv"><span class="n">A</span><h3>Graphics chip</h3><p>Automatic, or the dedicated one on a laptop with two.</p></div><div class="card rv"><span class="n">B</span><h3>Game Mode and MangoHud</h3><p>Priority while the game runs, and a frame-rate overlay.</p></div><div class="card rv"><span class="n">C</span><h3>DXVK and options</h3><p>DirectX through Vulkan on or off, extra game options and environment variables.</p></div><div class="card rv"><span class="n">D</span><h3>Proton-GE version</h3><p>Pin an older version for one game, or use the newest.</p></div><div class="card rv"><span class="n">E</span><h3>Windows components</h3><p>Install Visual C++, DirectX 9 files, fonts or .NET into one game&rsquo;s Windows folder.</p></div><div class="card rv"><span class="n">F</span><h3>Reset</h3><p>Start a game with a fresh Windows folder (the old one goes to the trash).</p></div></div><p class="note rv" style="margin-top:22px"><b>For Steam games,</b> the choices are written to Steam&rsquo;s own launch options while Steam is closed. For Lutris and Heroic they are written to each launcher&rsquo;s own per-game settings. A backup of the file is kept the first time.</p>
+    </div>
+  </section>
+  <section id="java" data-rail="Java">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="hud"><i>05</i>Java and Minecraft</span>
+        <h2>The right Java <em>for the version</em>.</h2>
+      </div>
+<div class="split"><ul class="ticks rv"><li>Shows the <b>system Javas</b> that are installed and the ones launchers such as Modrinth bring with them.</li><li>Minecraft 1.20.5 and newer needs Java 21, 1.18 to 1.20.4 needs Java 17, older versions need Java 8.</li><li><b>Install or switch</b> the system Java with one button (your password is asked).</li><li>A launcher installed as a Flatpak cannot see the system Java and uses its own, which the page says.</li></ul><div class="note rv"><b>Honest limit.</b> Fixing a particular Minecraft launcher problem needs its error message; this page shows what is installed and lets you change it.</div></div>
+    </div>
+  </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <h4>Zohara OS</h4>
+          <p>Created and maintained by <strong>Zohaib Baig</strong> (<a href="https://github.com/Zohaib8090">@Zohaib8090</a>). Dual-licensed under MIT and GPL-3.0-or-later; third-party software keeps its own licenses.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="link.html">Zohara Link</a></li>
+            <li><a href="welcome.html">Welcome and installer</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Source</h4>
+          <ul>
+            <li><a href="https://github.com/Zohaib8090/zohara">zohara</a>: the ISO, Store, Welcome, voice typing</li>
+            <li><a href="https://github.com/Zohaib8090/zohara-settings">zohara-settings</a></li>
+            <li><a href="https://github.com/Zohaib8090/zohara-packages">zohara-packages</a></li>
+            <li><a href="https://github.com/Zohaib8090/zohara-pipeline">zohara-pipeline</a></li>
+            <li><a href="https://github.com/Zohaib8090/zohara-link">zohara-link</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="legal">Windows is a trademark of Microsoft. Zohara OS is an independent project and is not affiliated with or endorsed by Microsoft, Brave Software, Valve, or Arch Linux.</p>
+    </div>
+  </footer>
+  <script src="site.js?v=20261015d"></script>
+</body>
+</html>

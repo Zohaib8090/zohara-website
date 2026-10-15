@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zohara Welcome and installer</title>
+  <meta name="description" content="The Zohara Welcome app and installer: install, try, or move your files from an old Linux install, with checks at every step.">
+  <meta name="theme-color" content="#080B10">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:title" content="Zohara Welcome and installer">
+  <meta property="og:description" content="The Zohara Welcome app and installer: install, try, or move your files from an old Linux install, with checks at every step.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://zohara-website.onrender.com/welcome.html">
+  <meta property="og:url" content="https://zohara-website.onrender.com/welcome.html">
+  <meta property="og:image" content="https://zohara-website.onrender.com/assets/img/desktop.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=20261015d">
+</head>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="index.html" aria-label="Zohara OS, home"><img src="assets/logo.svg" alt="" width="30" height="30">Zohara OS</a>
+      <button class="icon-btn menu-btn" id="menu" aria-label="Menu" aria-expanded="false" aria-controls="nav">&#9776;</button>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="settings.html">Settings</a>
+        <a href="store.html">Store</a>
+        <a href="games.html">Games</a>
+        <a href="link.html">Link</a>
+        <a href="welcome.html" aria-current="page">Welcome</a>
+        <a href="index.html#download" class="dl">Download</a>
+        <button class="icon-btn" id="theme" aria-label="Switch between dark and light" title="Dark / light">&#9681;</button>
+      </nav>
+    </div>
+  </header>
+  <div class="crumb"><div class="wrap"><span>06</span><span>/</span><b>Welcome</b></div></div>
+  <main id="main">
+  <section class="hero" id="overview" data-rail="Overview"><div class="wrap">
+      <span class="hud rv"><i>01</i>Zohara Welcome</span>
+      <h1 class="rv">Install it, try it, or <em>move in</em>.</h1>
+      <p class="lead rv">What you see on the live USB and the first time you sign in. Install Zohara, try it without installing anything, or move your files over from an old Linux install.</p>
+    </div></section>
+  <section id="install" data-rail="Install">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="hud"><i>02</i>Installing</span>
+        <h2>An installer that <em>asks first</em>.</h2>
+      </div>
+<div class="split"><ul class="ticks rv"><li><b>Calamares</b> does the install, and can install alongside Windows when it finds it.</li><li>It <b>never picks &ldquo;Erase disk&rdquo; for you.</b></li><li><b>Try Zohara</b> boots the full desktop from the USB stick so you can look around before changing anything.</li><li><b>If the installer fails,</b> one button on the Welcome screen saves a report to a USB stick.</li></ul><div class="note rv"><b>Before you boot.</b> Turn off Secure Boot, since the bootloaders are not signed yet. If no disks show, set the storage mode to AHCI instead of RAID / Intel RST.</div></div>
+    </div>
+  </section>
+  <section id="move" data-rail="Move in">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="hud"><i>03</i>Moving in</span>
+        <h2>Bring your files, <em>safely</em>.</h2>
+        <p class="lead">Coming from another Linux install on the same computer? Welcome can move your files across, one at a time, and tells you which of your old apps have a Zohara equivalent.</p>
+      </div>
+<div class="grid g3"><div class="card rv"><span class="n">A</span><h3>Move, verify, delete</h3><p>Each file is copied beside its destination, checked with SHA-256 against the original, renamed into place, and only then deleted from the old disk. Only one file&rsquo;s worth of extra space is needed, so it works on nearly full disks.</p></div><div class="card rv"><span class="n">B</span><h3>Nothing is overwritten</h3><p>If a file with the same name exists here, the old one is saved as &ldquo;name (old system).ext&rdquo;. An identical file is simply not copied twice.</p></div><div class="card rv"><span class="n">C</span><h3>A failed file stays put</h3><p>A file that does not verify stays on the old disk. Old system files are only deleted when every file succeeded and you asked for it.</p></div><div class="card rv"><span class="n">D</span><h3>Apps translated</h3><p>Debian and Ubuntu package names are matched to Arch packages, so the programs you used can be offered again.</p></div><div class="card rv"><span class="n">E</span><h3>Your own disk is protected</h3><p>The old partition must not be mounted anywhere else, so the disk Zohara runs from cannot be picked by mistake.</p></div></div>
+    </div>
+  </section>
+  <section id="first" data-rail="First sign-in">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="hud"><i>04</i>After the install</span>
+        <h2>The first time you <em>sign in</em>.</h2>
+      </div>
+<div class="split"><ul class="ticks rv"><li>Welcome shows once on an installed system, with shortcuts to <b>migrate</b>, to <b>accounts</b> and to <b>updates</b> (both in Settings).</li><li>Close it and it stays out of the way.</li></ul><div></div></div>
+    </div>
+  </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <h4>Zohara OS</h4>
+          <p>Created and maintained by <strong>Zohaib Baig</strong> (<a href="https://github.com/Zohaib8090">@Zohaib8090</a>). Dual-licensed under MIT and GPL-3.0-or-later; third-party software keeps its own licenses.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="link.html">Zohara Link</a></li>
+            <li><a href="welcome.html">Welcome and installer</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Source</h4>
+          <ul>
+            <li><a href="https://github.com/Zohaib8090/zohara">zohara</a>: the ISO, Store, Welcome, voice typing</li>
+            <li><a href="https://github.com/Zohaib8090/zohara-settings">zohara-settings</a></li>
+            <li><a href="https://github.com/Zohaib8090/zohara-packages">zohara-packages</a></li>
+            <li><a href="https://github.com/Zohaib8090/zohara-pipeline">zohara-pipeline</a></li>
+            <li><a href="https://github.com/Zohaib8090/zohara-link">zohara-link</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="legal">Windows is a trademark of Microsoft. Zohara OS is an independent project and is not affiliated with or endorsed by Microsoft, Brave Software, Valve, or Arch Linux.</p>
+    </div>
+  </footer>
+  <script src="site.js?v=20261015d"></script>
+</body>
+</html>

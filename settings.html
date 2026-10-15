@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zohara Settings: the control panel that changes real things</title>
+  <meta name="description" content="Zohara Settings is a Windows 11-style Settings app that controls the real system: display, sound, network, updates, privacy, drives, gaming and more.">
+  <meta name="theme-color" content="#080B10">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:title" content="Zohara Settings: the control panel that changes real things">
+  <meta property="og:description" content="Zohara Settings is a Windows 11-style Settings app that controls the real system: display, sound, network, updates, privacy, drives, gaming and more.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://zohara-website.onrender.com/settings.html">
+  <meta property="og:url" content="https://zohara-website.onrender.com/settings.html">
+  <meta property="og:image" content="https://zohara-website.onrender.com/assets/img/settings-home.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=20261015d">
+</head>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="index.html" aria-label="Zohara OS, home"><img src="assets/logo.svg" alt="" width="30" height="30">Zohara OS</a>
+      <button class="icon-btn menu-btn" id="menu" aria-label="Menu" aria-expanded="false" aria-controls="nav">&#9776;</button>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="settings.html" aria-current="page">Settings</a>
+        <a href="store.html">Store</a>
+        <a href="games.html">Games</a>
+        <a href="link.html">Link</a>
+        <a href="welcome.html">Welcome</a>
+        <a href="index.html#download" class="dl">Download</a>
+        <button class="icon-btn" id="theme" aria-label="Switch between dark and light" title="Dark / light">&#9681;</button>
+      </nav>
+    </div>
+  </header>
+  <div class="crumb"><div class="wrap"><span>02</span><span>/</span><b>Settings</b></div></div>
+  <main id="main">
+  <section class="hero" id="overview" data-rail="Overview"><div class="wrap">
+      <span class="hud rv"><i>01</i>Zohara Settings</span>
+      <h1 class="rv">One app for <em>everything</em> about your computer.</h1>
+      <p class="lead rv">A left rail and card groups, like the Windows 11 layout, written for Zohara in Rust and GTK. Every page changes the real system, and changes show up as the system changes, within a second.</p>
+      <figure class="frame rv">
+          <div class="bar2"><span></span><span></span><span></span><em>settings / home</em></div>
+          <a href="assets/img/settings-home.webp"><img src="assets/img/settings-home.webp" alt="Zohara Settings home" width="1280" height="877" loading="lazy"></a>
+          <figcaption>The Settings home page.</figcaption>
+        </figure>
+    </div></section>
+  <section id="look" data-rail="Look &amp; sound">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="hud"><i>02</i>Make it yours</span>
+        <h2>The desktop, <em>your way</em>.</h2>
+      </div>
+<div class="grid g3"><div class="card rv"><h3>Taskbar and windows</h3><p>Hide, float or fade the taskbar, move the window buttons, and set the cube and animation options with sliders.</p></div><div class="card rv"><h3>3D desktop cube</h3><p>Turn desktops as a cube, open the overview, move windows between desktops, or let each new app open on its own desktop.</p></div><div class="card rv"><h3>Live wallpaper</h3><p>A video that loops behind your windows, quiet unless you turn the sound on.</p></div><div class="card rv"><h3>Sound</h3><p>Balance for every output, volume up to 150%, an equalizer that changes while the music plays.</p></div><div class="card rv"><h3>Touchpad and mouse</h3><p>Reverse the scroll direction on each separately, tune speed, acceleration, tap to click and left-handed mode.</p></div><div class="card rv"><h3>Accessibility</h3><p>Contrast, text size, a screen reader and more.</p></div></div><div class="shots" style="margin-top:28px"><figure class="frame rv">
+          <div class="bar2"><span></span><span></span><span></span><em>sound</em></div>
+          <a href="assets/img/settings-sound.webp"><img src="assets/img/settings-sound.webp" alt="Sound settings" width="1280" height="877" loading="lazy"></a>
+          <figcaption><b>Sound.</b> Volume, balance for every device, and an equalizer.</figcaption>
+        </figure><figure class="frame rv">
+          <div class="bar2"><span></span><span></span><span></span><em>touchpad</em></div>
+          <a href="assets/img/settings-touchpad.webp"><img src="assets/img/settings-touchpad.webp" alt="Touchpad and mouse settings" width="1280" height="877" loading="lazy"></a>
+          <figcaption><b>Touchpad and mouse.</b> Scroll direction, speed, tap to click.</figcaption>
+        </figure><figure class="frame rv">
+          <div class="bar2"><span></span><span></span><span></span><em>accessibility</em></div>
+          <a href="assets/img/settings-accessibility.webp"><img src="assets/img/settings-accessibility.webp" alt="Accessibility settings" width="1280" height="877" loading="lazy"></a>
+          <figcaption><b>Accessibility.</b> Contrast, text size, a screen reader.</figcaption>
+        </figure></div>
+    </div>
+  </section>
+  <section id="system" data-rail="System">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="hud"><i>03</i>System</span>
+        <h2>Display, power, <em>memory</em>.</h2>
+      </div>
+<div class="grid g3"><div class="card rv"><h3>Display</h3><p>Resolution, scale and night light.</p></div><div class="card rv"><h3>Power and battery</h3><p>Power mode, sleep and lid rules.</p></div><div class="card rv"><h3>Memory and performance</h3><p>Plain-language controls for swap behaviour, cache pressure and compressed memory, with the defaults a click away.</p></div><div class="card rv"><h3>Graphics choice per app</h3><p>On a laptop with two graphics chips, choose which one each app uses.</p></div><div class="card rv"><h3>Keyboard</h3><p>Shortcuts, key repeat and layouts.</p></div><div class="card rv"><h3>Default apps</h3><p>Choose what opens each kind of file.</p></div></div><div class="shots" style="margin-top:28px"><figure class="frame rv">
+          <div class="bar2"><span></span><span></span><span></span><em>display</em></div>
+          <a href="assets/img/settings-display.webp"><img src="assets/img/settings-display.webp" alt="Display settings" width="1280" height="877" loading="lazy"></a>
+          <figcaption><b>Display.</b> Resolution, scale and night light.</figcaption>
+        </figure><figure class="frame rv">
+          <div class="bar2"><span></span><span></span><span></span><em>power</em></div>
+          <a href="assets/img/settings-power.webp"><img src="assets/img/settings-power.webp" alt="Power and battery settings" width="1280" height="877" loading="lazy"></a>
+          <figcaption><b>Power and battery.</b> Power mode, sleep and lid rules.</figcaption>
+        </figure><figure class="frame rv">
+          <div class="bar2"><span></span><span></span><span></span><em>keyboard</em></div>
+          <a href="assets/img/settings-keyboard.webp"><img src="assets/img/settings-keyboard.webp" alt="Keyboard settings" width="1280" height="877" loading="lazy"></a>
+          <figcaption><b>Keyboard.</b> Shortcuts, key repeat and layouts.</figcaption>
+        </figure></div>
+    </div>
+  </section>
+  <section id="updates" data-rail="Updates">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="hud"><i>04</i>Updates and apps</span>
+        <h2>Updates you <em>control</em>.</h2>
+        <p class="lead">Pick a channel, choose what to update, and undo the last update. Programs that fit your hardware are suggested, and you can say no to any of them. Update checks tell you; they never install on their own.</p>
+      </div>
+<div class="shots"><figure class="frame rv">
+          <div class="bar2"><span></span><span></span><span></span><em>updates</em></div>
+          <a href="assets/img/settings-update.webp"><img src="assets/img/settings-update.webp" alt="Zohara Update" width="1280" height="877" loading="lazy"></a>
+          <figcaption><b>Updates.</b> A channel, what to update, undo.</figcaption>
+        </figure><figure class="frame rv">
+          <div class="bar2"><span></span><span></span><span></span><em>apps</em></div>
+          <a href="assets/img/settings-apps.webp"><img src="assets/img/settings-apps.webp" alt="Apps settings" width="1280" height="877" loading="lazy"></a>
+          <figcaption><b>Apps.</b> Installed apps, startup apps and web apps.</figcaption>
+        </figure><figure class="frame rv">
+          <div class="bar2"><span></span><span></span><span></span><em>default apps</em></div>
+          <a href="assets/img/settings-default-apps.webp"><img src="assets/img/settings-default-apps.webp" alt="Default apps" width="1280" height="877" loading="lazy"></a>
+          <figcaption><b>Default apps.</b> What opens each kind of file.</figcaption>
+        </figure></div>
+    </div>
+  </section>
+  <section id="drives" data-rail="Drives">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="hud"><i>05</i>Drives and storage</span>
+        <h2>USB drives, SD cards and <em>external disks</em>.</h2>
+        <p class="lead">Plug one in and it shows up in Settings.</p>
+      </div>
+<div class="split"><ul class="ticks rv"><li><b>Rename and format</b> as exFAT, FAT32, ext4 or Btrfs.</li><li><b>Check and repair</b>, and close it safely before you unplug it.</li><li><b>Make a bootable USB.</b> Choose an ISO or disk image and write it from Settings, with a read-back check afterwards. Your administrator password is asked before anything is written.</li><li><b>Hard to wipe by accident.</b> The disks inside the computer and the one Zohara runs from are locked. Every erase names the drive, lists what is on it and needs you to type ERASE; Settings checks it is still the same drive just before it starts.</li></ul><div class="note ok rv"><b>Why so careful?</b> A wrong click on a disk tool is the one mistake that cannot be undone, so the app makes the safe path the only easy one.</div></div>
+    </div>
+  </section>
+  <section id="privacy" data-rail="Privacy">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="hud"><i>06</i>Privacy and troubleshooting</span>
+        <h2>Safe, and <em>honest</em> about problems.</h2>
+      </div>
+<div class="shots"><figure class="frame rv">
+          <div class="bar2"><span></span><span></span><span></span><em>privacy</em></div>
+          <a href="assets/img/settings-privacy.webp"><img src="assets/img/settings-privacy.webp" alt="Privacy and security" width="1280" height="877" loading="lazy"></a>
+          <figcaption><b>Privacy and security.</b> A firewall and device access in one place, one indicator for camera and microphone use.</figcaption>
+        </figure><figure class="frame rv">
+          <div class="bar2"><span></span><span></span><span></span><em>troubleshoot</em></div>
+          <a href="assets/img/settings-troubleshoot.webp"><img src="assets/img/settings-troubleshoot.webp" alt="Troubleshoot" width="1280" height="877" loading="lazy"></a>
+          <figcaption><b>Troubleshoot.</b> Problems found and fixed, with a report you can send.</figcaption>
+        </figure><figure class="frame rv">
+          <div class="bar2"><span></span><span></span><span></span><em>gaming</em></div>
+          <a href="assets/img/settings-gaming.webp"><img src="assets/img/settings-gaming.webp" alt="Gaming" width="1280" height="877" loading="lazy"></a>
+          <figcaption><b>Gaming.</b> Your games found for you, and Game Mode.</figcaption>
+        </figure></div>
+    </div>
+  </section>
+  <section id="next" data-rail="Next">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="hud"><i>07</i>In testing now</span>
+        <h2>Coming <em>next</em>. <span class="tag test">In testing</span></h2>
+        <p class="lead">These are built and being tested in the development channel. They are not in the 1.1 ISO.</p>
+      </div>
+<div class="grid g3"><div class="card rv"><span class="n">01</span><h3>Windows games</h3><p>Open Windows programs with a double-click, with Proton-GE or Wine, a Safety mode, and settings for each game.</p></div><div class="card rv"><span class="n">02</span><h3>Games from every launcher</h3><p>A settings gear for Steam, Lutris and Heroic games: graphics chip, Game Mode, MangoHud, options.</p></div><div class="card rv"><span class="n">03</span><h3>Java for Minecraft</h3><p>See which Javas are installed, which a Minecraft version needs, and install or switch the system Java.</p></div><div class="card rv"><span class="n">04</span><h3>Zohara Link and game streaming</h3><p>Pair a phone, use it as a touchpad and game controller, and stream the screen as live video.</p></div><div class="card rv"><span class="n">05</span><h3>Live graphics view</h3><p>Which graphics chip each app is using right now, with load, memory and temperature, without waking a sleeping chip.</p></div><div class="card rv"><span class="n">06</span><h3>Proton-GE updates</h3><p>A notice when a newer Proton-GE is out. You press Update; nothing is automatic.</p></div></div>
+    </div>
+  </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <h4>Zohara OS</h4>
+          <p>Created and maintained by <strong>Zohaib Baig</strong> (<a href="https://github.com/Zohaib8090">@Zohaib8090</a>). Dual-licensed under MIT and GPL-3.0-or-later; third-party software keeps its own licenses.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="link.html">Zohara Link</a></li>
+            <li><a href="welcome.html">Welcome and installer</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Source</h4>
+          <ul>
+            <li><a href="https://github.com/Zohaib8090/zohara">zohara</a>: the ISO, Store, Welcome, voice typing</li>
+            <li><a href="https://github.com/Zohaib8090/zohara-settings">zohara-settings</a></li>
+            <li><a href="https://github.com/Zohaib8090/zohara-packages">zohara-packages</a></li>
+            <li><a href="https://github.com/Zohaib8090/zohara-pipeline">zohara-pipeline</a></li>
+            <li><a href="https://github.com/Zohaib8090/zohara-link">zohara-link</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="legal">Windows is a trademark of Microsoft. Zohara OS is an independent project and is not affiliated with or endorsed by Microsoft, Brave Software, Valve, or Arch Linux.</p>
+    </div>
+  </footer>
+  <script src="site.js?v=20261015d"></script>
+</body>
+</html>

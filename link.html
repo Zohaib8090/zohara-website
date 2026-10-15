@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zohara Link: your phone and your computer, together</title>
+  <meta name="description" content="Zohara Link is an Android companion for Zohara OS: share the clipboard, send files, see notifications, and use the phone as a touchpad, keyboard and game controller. In development.">
+  <meta name="theme-color" content="#080B10">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:title" content="Zohara Link: your phone and your computer, together">
+  <meta property="og:description" content="Zohara Link is an Android companion for Zohara OS: share the clipboard, send files, see notifications, and use the phone as a touchpad, keyboard and game controller. In development.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://zohara-website.onrender.com/link.html">
+  <meta property="og:url" content="https://zohara-website.onrender.com/link.html">
+  <meta property="og:image" content="https://zohara-website.onrender.com/assets/img/desktop.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=20261015d">
+</head>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="index.html" aria-label="Zohara OS, home"><img src="assets/logo.svg" alt="" width="30" height="30">Zohara OS</a>
+      <button class="icon-btn menu-btn" id="menu" aria-label="Menu" aria-expanded="false" aria-controls="nav">&#9776;</button>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="settings.html">Settings</a>
+        <a href="store.html">Store</a>
+        <a href="games.html">Games</a>
+        <a href="link.html" aria-current="page">Link</a>
+        <a href="welcome.html">Welcome</a>
+        <a href="index.html#download" class="dl">Download</a>
+        <button class="icon-btn" id="theme" aria-label="Switch between dark and light" title="Dark / light">&#9681;</button>
+      </nav>
+    </div>
+  </header>
+  <div class="crumb"><div class="wrap"><span>05</span><span>/</span><b>Link</b></div></div>
+  <main id="main">
+  <section class="hero" id="overview" data-rail="Overview"><div class="wrap">
+      <span class="hud rv"><i>01</i>Zohara Link <span class="tag test">In development</span></span>
+      <h1 class="rv">Your phone and your computer, <em>together</em>.</h1>
+      <p class="lead rv">A companion for Android that shares your clipboard and files, shows your phone&rsquo;s notifications on the desktop, and turns the phone into a touchpad, a keyboard and a game controller.</p>
+      <p class="note rv"><b>Not released.</b> The computer side is in the development channel. The Android app is a test build that is not on any store: it installs from GitHub and has had builds and tests, but little use on real phones yet.</p>
+    </div></section>
+  <section id="share" data-rail="Share">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="hud"><i>02</i>Share</span>
+        <h2>Clipboard, files, <em>notifications</em>.</h2>
+      </div>
+<div class="grid g3"><div class="card rv"><span class="n">A</span><h3>Clipboard</h3><p>Copy on one, paste on the other.</p></div><div class="card rv"><span class="n">B</span><h3>Files</h3><p>Send a file from the phone to the computer, or from the computer to the phone.</p></div><div class="card rv"><span class="n">C</span><h3>Notifications and media</h3><p>Phone notifications appear on the desktop; play, pause and skip from the phone.</p></div></div>
+    </div>
+  </section>
+  <section id="control" data-rail="Control">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="hud"><i>03</i>Control</span>
+        <h2>A touchpad, a keyboard and a <em>game controller</em>.</h2>
+        <p class="lead">The computer makes virtual input devices and writes the phone&rsquo;s events straight to them, so the pointer follows your finger instead of lagging behind it.</p>
+      </div>
+<div class="split"><ul class="ticks rv"><li><b>Touchpad.</b> Pointer acceleration, tap to click, two-finger tap to right-click, two-finger drag to scroll smoothly, tap-then-drag to hold the button.</li><li><b>Keyboard</b> keys, including held keys, and typing.</li><li><b>Game controller.</b> The phone appears as a wired Xbox 360 controller, the one every game and Steam already know: two sticks, two triggers, a direction pad and eleven buttons.</li><li><b>Full-screen remote.</b> See the screen and control it as a touchpad or a touch screen.</li></ul><div class="note rv"><b>You decide.</b> A phone may only see the screen or control the mouse when you switch that on for it in Settings &gt; Zohara Link. Both are off until you choose.</div></div>
+    </div>
+  </section>
+  <section id="stream" data-rail="Stream">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="hud"><i>04</i>Game streaming</span>
+        <h2>Live video from the computer <em>to the phone</em>. <span class="tag test">In development</span></h2>
+        <p class="lead">The screen is captured through the desktop&rsquo;s own screen-sharing permission, encoded with a hardware video encoder, and sent as live video with WebRTC. The phone decodes it with its own hardware.</p>
+      </div>
+<div class="split flip"><ul class="ticks rv"><li><b>Hardware encoding.</b> The Intel chip&rsquo;s encoder first, so the NVIDIA chip can stay asleep; NVENC when the NVIDIA chip is already running the game; software as a last resort.</li><li><b>Encrypted</b> end to end by WebRTC, set up over the connection the phone is already paired on.</li><li><b>Input travels back</b> on the same stream.</li><li><b>One-time permission.</b> The desktop asks once whether Zohara Link may share the screen.</li></ul><div class="note rv"><b>Honest status.</b> The pieces are built and tested separately: a whole test stream between two programs, the signalling against the real daemon, and the screen-sharing permission on a real laptop. A stream to a real phone has not been tried yet, and delay has not been measured. Sound is not built.</div></div>
+    </div>
+  </section>
+  <section id="safe" data-rail="Private">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="hud"><i>05</i>Private by design</span>
+        <h2>Nothing leaves <em>your network</em>.</h2>
+      </div>
+<div class="grid g3"><div class="card rv"><span class="n">A</span><h3>A PIN you type once</h3><p>Pairing is closed until you press Pair a phone. The PIN is shown on the computer and typed on the phone; it never travels over the network.</p></div><div class="card rv"><span class="n">B</span><h3>Pinned and encrypted</h3><p>The connection is TLS with the computer&rsquo;s certificate pinned on the phone.</p></div><div class="card rv"><span class="n">C</span><h3>Away from home</h3><p>With Tailscale on both, the phone reaches the computer from any network. Zohara Link can sign in and out of Tailscale for you.</p></div></div>
+    </div>
+  </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <h4>Zohara OS</h4>
+          <p>Created and maintained by <strong>Zohaib Baig</strong> (<a href="https://github.com/Zohaib8090">@Zohaib8090</a>). Dual-licensed under MIT and GPL-3.0-or-later; third-party software keeps its own licenses.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="link.html">Zohara Link</a></li>
+            <li><a href="welcome.html">Welcome and installer</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Source</h4>
+          <ul>
+            <li><a href="https://github.com/Zohaib8090/zohara">zohara</a>: the ISO, Store, Welcome, voice typing</li>
+            <li><a href="https://github.com/Zohaib8090/zohara-settings">zohara-settings</a></li>
+            <li><a href="https://github.com/Zohaib8090/zohara-packages">zohara-packages</a></li>
+            <li><a href="https://github.com/Zohaib8090/zohara-pipeline">zohara-pipeline</a></li>
+            <li><a href="https://github.com/Zohaib8090/zohara-link">zohara-link</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="legal">Windows is a trademark of Microsoft. Zohara OS is an independent project and is not affiliated with or endorsed by Microsoft, Brave Software, Valve, or Arch Linux.</p>
+    </div>
+  </footer>
+  <script src="site.js?v=20261015d"></script>
+</body>
+</html>
