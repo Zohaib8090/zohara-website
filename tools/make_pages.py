@@ -8,7 +8,7 @@ import html, pathlib
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = "https://zohara-website.onrender.com"
 ISO_URL = "https://objectstorage.ap-mumbai-1.oraclecloud.com/n/bm27e3oxmp04/b/zohara-os/o/zohara-os-2026.10.10-x86_64.iso"
-V = "20261015d"  # bump when style.css or site.js change, so browsers fetch the new files
+V = "20261112a"  # bump when style.css or site.js change, so browsers fetch the new files
 ISO_SHA = "9a4602141595fe8d1c2dc31ac0b0632ee1f6202a9db07e8943dab4fbce39518e"
 
 NAV = [("index.html", "Home"), ("settings.html", "Settings"), ("store.html", "Store"), ("games.html", "Games"),
@@ -22,7 +22,7 @@ def e(s):
 _num = [1]
 
 
-def head(title, desc, page, image="assets/img/desktop.webp"):
+def head(title, desc, page, image="assets/og-image.jpg", extra=""):
     _num[0] = 1  # the first section of every page (its hero) is 01
     url = SITE + "/" + ("" if page == "index.html" else page)
     return f"""<!doctype html>
@@ -36,23 +36,36 @@ def head(title, desc, page, image="assets/img/desktop.webp"):
   <meta name="color-scheme" content="dark light">
   <meta property="og:title" content="{e(title)}">
   <meta property="og:description" content="{e(desc)}">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Zohara OS">
+  <meta property="og:locale" content="en_US">
   <link rel="canonical" href="{url}">
   <meta property="og:url" content="{url}">
   <meta property="og:image" content="{SITE}/{image}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Zohara OS: a Linux that feels like home, with its desktop, taskbar and Start menu">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{e(title)}">
+  <meta name="twitter:description" content="{e(desc)}">
+  <meta name="twitter:image" content="{SITE}/{image}">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v={V}">
+  <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+  <link rel="stylesheet" href="style.css?v={V}">{extra}
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap bar">
-      <a class="brand" href="index.html" aria-label="Zohara OS, home"><img src="assets/logo.svg" alt="" width="30" height="30">Zohara OS</a>
+      <a class="brand" href="./" aria-label="Zohara OS, home"><img src="assets/logo.svg" alt="" width="30" height="30">Zohara OS</a>
       <button class="icon-btn menu-btn" id="menu" aria-label="Menu" aria-expanded="false" aria-controls="nav">&#9776;</button>
       <nav class="nav" id="nav" aria-label="Main">
 {chr(10).join(f'        <a href="{h}"' + (' aria-current="page"' if h == page else '') + f'>{t}</a>' for h, t in NAV)}
-        <a href="index.html#download" class="dl">Download</a>
+        <a href="./#download" class="dl">Download</a>
         <button class="icon-btn" id="theme" aria-label="Switch between dark and light" title="Dark / light">&#9681;</button>
       </nav>
     </div>
@@ -69,11 +82,11 @@ FOOT = """  <footer class="site-footer">
     <div class="wrap">
       <div class="cols">
         <div>
-          <h4>Zohara OS</h4>
+          <p class="fh" role="heading" aria-level="2">Zohara OS</p>
           <p>Created and maintained by <strong>Zohaib Baig</strong> (<a href="https://github.com/Zohaib8090">@Zohaib8090</a>). Dual-licensed under MIT and GPL-3.0-or-later; third-party software keeps its own licenses.</p>
         </div>
         <div>
-          <h4>Pages</h4>
+          <p class="fh" role="heading" aria-level="2">Pages</p>
           <ul>
             <li><a href="settings.html">Settings</a></li>
             <li><a href="store.html">Store</a></li>
@@ -83,7 +96,7 @@ FOOT = """  <footer class="site-footer">
           </ul>
         </div>
         <div>
-          <h4>Source</h4>
+          <p class="fh" role="heading" aria-level="2">Source</p>
           <ul>
             <li><a href="https://github.com/Zohaib8090/zohara">zohara</a>: the ISO, Store, Welcome, voice typing</li>
             <li><a href="https://github.com/Zohaib8090/zohara-settings">zohara-settings</a></li>
@@ -144,10 +157,27 @@ def write(name, text):
 
 
 # ══════════════════════════════════════════════════════ HOME ══════════════════════════════════════════════════════
+def jsonld():
+    import json
+    data = {"@context": "https://schema.org", "@graph": [
+        {"@type": "WebSite", "@id": SITE + "/#website", "url": SITE + "/", "name": "Zohara OS", "inLanguage": "en",
+         "publisher": {"@id": SITE + "/#org"}},
+        {"@type": "Organization", "@id": SITE + "/#org", "name": "Zohara OS", "url": SITE + "/",
+         "logo": SITE + "/assets/icons/icon-512.png", "founder": {"@type": "Person", "name": "Zohaib Baig"},
+         "sameAs": ["https://github.com/Zohaib8090/zohara-website"]},
+        {"@type": "SoftwareApplication", "@id": SITE + "/#software", "name": "Zohara OS", "operatingSystem": "Linux",
+         "applicationCategory": "OperatingSystem", "softwareVersion": "1.1", "url": SITE + "/", "downloadUrl": ISO_URL,
+         "fileSize": "4.0 GB", "image": SITE + "/assets/og-image.jpg", "inLanguage": "en",
+         "description": "An Arch-based Linux distribution with the KDE Plasma desktop, a Windows-style taskbar and Start menu, a Settings app and a software store.",
+         "author": {"@id": SITE + "/#org"},
+         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock"}}]}
+    return '\n  <script type="application/ld+json">' + json.dumps(data, indent=2) + "</script>"
+
+
 def home():
     out = head("Zohara OS: a Linux that feels like home",
-               "Zohara OS 1.1 is an Arch-based Linux with a desktop Windows users already know: a taskbar and Start menu, a 3D desktop cube, a Windows 11-style Settings app, a software store and offline voice typing.",
-               "index.html")
+               "Zohara OS 1.1 is an Arch-based Linux with a desktop Windows users already know: taskbar and Start menu, a 3D desktop cube, Settings and a software store.",
+               "index.html", extra=jsonld())
     out += """  <main id="main">
   <section class="hero" id="start" data-rail="Start">
     <div class="wrap">
@@ -403,7 +433,7 @@ def games():
 
 # ════════════════════════════════════════════════════ LINK PAGE ═════════════════════════════════════════════════════
 def link():
-    out = head("Zohara Link: your phone and your computer, together", "Zohara Link is an Android companion for Zohara OS: share the clipboard, send files, see notifications, and use the phone as a touchpad, keyboard and game controller. In development.", "link.html")
+    out = head("Zohara Link: your phone and your computer, together", "Zohara Link is an Android companion for Zohara OS: share the clipboard, send files, see notifications, use the phone as touchpad or keyboard. In development.", "link.html")
     out += crumb("05", "Link") + '  <main id="main">\n'
     out += """  <section class="hero" id="overview" data-rail="Overview"><div class="wrap">
       <span class="hud rv"><i>01</i>Zohara Link <span class="tag test">In development</span></span>

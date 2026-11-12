@@ -48,7 +48,7 @@ Only the Download section of `index.html` changes: the `<h3>` (version and build
 and the SHA-256 in the "Optional: check it" step. Do it **after** the ISO is in the Oracle bucket and its public download was hashed
 (see `zohara/docs/HANDOFF-2026-10-12.md`, "How the release was done"). The bucket keeps only the newest two ISOs; the SourceForge
 mirror button was removed for 1.1 (add it back only when the mirror has the same build). Push to `main`, wait for Render, then compare
-`sha256sum` of the live image files and check the live page text. The page has no `sitemap.xml` or `robots.txt` yet.
+`sha256sum` of the live image files and check the live page text.
 
 ## Page map
 
@@ -65,3 +65,18 @@ Under 1240px the rail is not drawn; with "reduce motion" the labels stay still; 
 Pages for features that are not in the 1.1 ISO (Windows games, Java page, Zohara Link, game streaming) say so with an
 "In testing" or "In development" tag. Checked with headless Chrome at 390, 820 and 1440 px, dark and light: no horizontal scroll,
 no broken pictures, no dead anchors, no console errors.
+
+## Search Console
+
+- **Property type:** URL-prefix, `https://zohara-website.onrender.com/`. If the site later gets its own domain (the `CNAME` file), add a
+  Domain property for it (DNS TXT verification) and update `SITE` in `tools/check_site.py`, the canonical and Open Graph URLs,
+  `robots.txt` and `sitemap.xml`.
+- **Verification already exists** through the file `google0dfec91cc0809278.html` in the site root. Do not delete or edit it, or the property
+  loses verification.
+- **Submit the sitemap:** Search Console, Sitemaps, enter `sitemap.xml`, Submit. `robots.txt` also points to it.
+- **Request indexing:** URL inspection at the top, paste a page address, wait for the test, then "Request indexing". Do it for the home page
+  and after big changes.
+- **Check results:** Pages (Indexing) shows what is indexed and why anything is not; Enhancements/Experience shows structured data and
+  mobile problems. Rich results come from the JSON-LD on `index.html` (WebSite, Organization, SoftwareApplication).
+- **Before every push:** `python3 tools/check_site.py` (links, anchors, titles, descriptions, canonicals, JSON-LD, sitemap). When pages change,
+  update the `lastmod` dates in `sitemap.xml`.

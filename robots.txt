@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+# /tools/ only holds the page generator (a Python script), not pages for people.
+Disallow: /tools/
+
+Sitemap: https://zohara-website.onrender.com/sitemap.xml

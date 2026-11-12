@@ -162,7 +162,7 @@ td { color: var(--muted); }
 /* ── footer ─────────────────────────────────────── */
 .site-footer { border-top: 1px solid var(--line); padding: 44px 0 60px; color: var(--faint); font-size: 0.9rem; }
 .site-footer .cols { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 28px; margin-bottom: 26px; }
-.site-footer h4 { margin: 0 0 12px; font: 600 0.74rem/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.site-footer .fh { margin: 0 0 12px; font: 600 0.74rem/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
 .site-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .site-footer a { color: var(--muted); }
 .site-footer .legal { font-size: 0.82rem; max-width: 90ch; }
